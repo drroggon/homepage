@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter', serif;
+}
+body{
+    height: 100%;
+    background-color: #05316D;
+    background-image: linear-gradient(#05316D, #FFE340);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:    "h"
+                            "t";
+}
+
+#navigation {
+    grid-area: h;
+    width: 100%;;
+    height: 5vh;
+    padding-top: 5%;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: space-around;
+}
+a {
+    width: 25%;
+    border-radius: 1px;
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+a:hover {
+    animation: fadein 1.5s;
+    color: #FFE500;
+    text-decoration: underline;
+}
+.text-box {
+    grid-area: t;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+}
+.main-bt{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px 12px 34px;
+    background: transparent;
+    width: auto;
+}
+
+@media screen and (max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    #navigation{
+        display: flex;
+        flex-direction: column;
+        background: #05326D;
+        width: auto;
+        height: 100%;
+        text-align: left;
+        justify-content: center;
+    }
+    #navigation a{
+        width: 100%;
+        text-align: center;
+    }
+    .header{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "h t";
+    }
+}
+
+/* FIGURES */
+.figures{
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    height: 60vh;
+
+}
+.figures h1{
+    color: #fff;
+    font-size: 1.5em;
+}
+.photo{
+    width: 100%;
+    aspect-ratio: 3 / 4;
+
+}
+.complect{
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    margin: 1%;
+}
+.cover{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+.cover:hover{
+    animation: opa 1.5s;
+    opacity: 1;
+}
+.red{
+    background-color: rgb(185, 30, 30, 0.8);
+}
+
+.black{
+    background-color: rgb(0, 0, 0, 0.8);
+}
+@keyframes opa{
+    from { opacity: 0; }
+    to { opacity: 1;}
+}
+
+/* HISTORY */
+.history{
+    width: 100%;
+    text-align: justify;
+    padding-top: 10px;
+    height: 60vh;
+    padding: 3%;
+}
+
+.history h1{
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.history h2{
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+.history p{
+    color: #fff;
+    font-size: 0.9em;
+    text-indent: 2%;
+    margin: 2px;
+}
+#picgroup{
+    max-width: 70%;
+    max-height: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#pic {
+    max-width: 100%;
+    max-height: 100%;
+    width: 30%;
+    margin-left: auto;
+    margin-top: auto;
+    float: right;
+}
+.rubric{
+    display: inline-block;
+    width: 60%;
+}
+
+.redborders{
+    border-style: solid;
+    border-width: 7px;
+    border-color: #B31E28;
+    padding: 5em;
+}
+.blackborders{
+    border-style: solid;
+    border-width: 7px;
+    border-color: #000;
+    padding: 5em;
+}
+
+/* ATRIBUTES */
+
+.atributes{
+
+}
+
+.atributes h1{
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+}
+.atributes p{
+    text-indent: 2%;
+    margin: 2px;
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+}
+.atributes-col{
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.atributes-col img{
+    width: auto;
+    height: 30%;
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+.atributes-col p{
+    padding: 0;
+}
+.atributes-col h2{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+#alignment{
+    margin: auto;
+    justify-content: center;
+}
